@@ -4,29 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    //alulvonas hianyzik
-    int *b = new int[NELEMENTS];
-    //sor nincs lezarva, "
-    std::cout << '1-100 ertekek duplazasa'
-    //for ciklus nincs meghatarozva meddig menjen
-    for (int i = 0)
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa";
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        //(i+1)
-        b[i] = i * 2;
+        b[i] = (i+1) * 2;
     }
-    //fura for ciklus
-    for (int i = 0; i; i++)
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        //cout fele hianyzik
-        std::cout << "Ertek:"
+        std::cout << "Ertek: " << b[i] << std::endl;
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    //kezdoertek
-    int atlag;
+    int atlag = 0;
     for (int i = 0; i < N_ELEMENTS, i++)
     {
-        //sor vege
-        atlag += b[i]
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
